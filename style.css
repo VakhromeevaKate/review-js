@@ -29,6 +29,10 @@ input[type="submit"]:hover {
 	opacity: .8;
 }
 .columns {
+	/*
+		Нужно исправить: заданная высота ломает верстку - контейнер не растягивается вместе с вложенными
+		элементами.
+	*/
 	height: 100vh;
 	display: flex;
 	justify-content: space-around;

@@ -23,6 +23,13 @@ class Component {
 		this.setEventListener();
 		return this._element;
 	}
+	/*
+	  Можно лучше:
+	  - лучше отступать между функциями / переменными одинаковое кол-во строк для улучшения читабельности.
+	  	чтобы не делать этого вручную, в больших проектах обычно настраивают линтер и prettier.
+	  	Более подробно о них можно почитать здесь:
+	  	https://eslint.org/ и https://prettier.io/.
+	*/
 	removeItem() {
 		this.removeEventListener();
 		this._element.remove();
@@ -31,5 +38,9 @@ class Component {
 
 	setEventListener() {}
 	removeEventListener() {}
+	/*
+	  Можно лучше: лучше не оставлять лишних пустых строк в файле. Для автоматизации можно также воспользоваться
+	  линтером и prettier (https://eslint.org/ и https://prettier.io/).
+	*/
 
 }

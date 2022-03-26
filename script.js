@@ -1,4 +1,7 @@
 window.onload = () => {
+	/*
+		Можно лучше: стили именования переменных (и констант) лучше не смешивать
+	*/
 	const FORM_WRAPPER = document.querySelector(`.column_type_input`);
 	const ratingArray = [];
 	let countedRating = 20;
@@ -17,7 +20,9 @@ window.onload = () => {
 			value === `` ? ratingRender(countedRating, allItemsData) : ratingUpdate(filteredItems);
 		};
 	};
-
+	/*
+		Надо исправить: для именования функций следует использовать глаголы - renderRating, updateRating... и т.п.
+	*/
 	const ratingRender = (ratingAmount, ratingArray) => {
 		for (let i = 0; i < ratingAmount; i++) {
 			ratingArray[i] = new PersonRating(returnRandomData());
@@ -44,6 +49,9 @@ window.onload = () => {
 			const cat = document.querySelector(`input[name=cat]`).value;
 			const rest = document.querySelector(`input[name=rest]`).value;
 			const money = document.querySelector(`input[name=money]`).value;
+			/*
+				Надо исправить: переменные принято именовать со строчной буквы: man
+			*/
 			const Man = new Person(name);
 			if (cat === 'yes') {
 				Man.hasCat();

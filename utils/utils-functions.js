@@ -1,5 +1,8 @@
 const utilsFunctions = {
   getRandomNumber: (min, max) => Math.floor(Math.random() * (max - min) + min),
+  /*
+    Можно лучше: для единообразия лучше назвать функцию без сокращений - getRandomFromArray
+  */
   getRandFromArr: (arr) => {
     const index = utilsFunctions.getRandomNumber(0, arr.length);
     return arr[index];
